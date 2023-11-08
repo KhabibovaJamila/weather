@@ -8,10 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContract
+
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.weather.Manifest
-import com.example.weather.R
+
 import com.example.weather.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
@@ -29,7 +28,7 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        permissionListener()
+        checkPermission()
     }
 
     private fun permissionListener(){
